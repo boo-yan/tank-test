@@ -6,17 +6,16 @@ import os
 from selenium.webdriver.support.wait import WebDriverWait
 
 # 需要安装的 apk 包(debug版)，放到当前目录
-debug_apk = os.path.join(os.path.dirname(__file__), "app-debug.apk")
+#debug_apk = os.path.join(os.path.dirname(__file__), "app-debug.apk")
 desired_caps = {
     'platformName': "Android",
-    'platformVersion': "8",
-    # 'deviceName': "emulator-5554",
-    'deviceName': "Android Emulator",
+   # 'platformVersion': "8",
+    'deviceName': "emulator-5554",
     'appPackage': "com.huyang.test",
     'appActivity': ".MainActivity",
-    'automationName': "UiAutomator2",
+    #'automationName': "UiAutomator2",
     # apk 包
-    'app': debug_apk,
+    'app':"F://tank-wang//tank-test//app-release - 2020-06-23T160524.693.apk",
     'unicodeKeyboard': True,  # 使用unicodeKeyboard,即Appiuum自带键盘
     'resetKeyboard': True,  # 重新设置系统键盘为Appium自带键盘pip
     'noReset': True  # 每次启动不重置APP,即不执行清空APP数据操作
